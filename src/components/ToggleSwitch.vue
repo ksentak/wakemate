@@ -32,9 +32,9 @@ const isPreventingSleep = ref(false);
 
 const toggle = async () => {
   if (isPreventingSleep.value) {
-    await invoke('allow_sleep');
+    await invoke('allow_sleep_command');
   } else {
-    await invoke('prevent_sleep');
+    await invoke('prevent_sleep_command');
   }
   // Toggle the state after invoking the correct function
   isPreventingSleep.value = !isPreventingSleep.value;
