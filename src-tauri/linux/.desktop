@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=YourAppName
+Comment=Your app description
+Exec=/usr/bin/yourapp
+Icon=yourapp
+Terminal=false
+Type=Application
+Categories=Utility;
