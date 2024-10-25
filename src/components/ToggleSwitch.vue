@@ -15,7 +15,7 @@
         :icon="faPowerOff"
         :class="[
           'relative duration-300 ease-in-out text-9xl',
-          isEnabled ? 'text-yellow-600' : 'text-zinc-700',
+          isPreventingSleep ? 'text-yellow-600' : 'text-zinc-700',
         ]"
       />
     </button>
@@ -24,12 +24,19 @@
 
 <script setup>
 import { ref } from 'vue';
+import { invoke } from '@tauri-apps/api/core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
 
-const isEnabled = ref(false);
+const isPreventingSleep = ref(false);
 
-const toggle = () => {
-  isEnabled.value = !isEnabled.value;
+const toggle = async () => {
+  if (isPreventingSleep.value) {
+    await invoke('allow_sleep');
+  } else {
+    await invoke('prevent_sleep');
+  }
+  // Toggle the state after invoking the correct function
+  isPreventingSleep.value = !isPreventingSleep.value;
 };
 </script>
