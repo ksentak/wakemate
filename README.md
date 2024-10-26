@@ -25,3 +25,5 @@ NO_STRIP=true npm run tauri build
 ### TODO
 
 -Configure `.desktop` file for linux.
+-Clean up readme.
+-Build on Windows & Linux.
