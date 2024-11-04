@@ -1,0 +1,8 @@
+[Desktop Entry]
+Categories=Utility;
+Comment=Keeps your computer awake
+Exec=wakemate
+Icon=wakemate
+Name=Wakemate
+Terminal=false
+Type=Application

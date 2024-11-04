@@ -5,7 +5,7 @@
     <h1
       class="text-5xl font-bold font-mono bg-gradient-to-r from-violet-700 via-red-500 to-yellow-500 bg-clip-text text-transparent mt-12 mb-20"
     >
-      WakeMate
+      Wakemate
     </h1>
     <button
       @click="toggle"

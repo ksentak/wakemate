@@ -21,7 +21,7 @@ impl SleepGuard {
                 .idle(true) // Prevent the system from sleeping due to inactivity.
                 .sleep(true) // Prevent the system from sleeping (OS-specific).
                 .reason("User requested") // Reason for preventing sleep, for display on macOS/Linux.
-                .app_name("wakeMate") // Application name (shown on Linux).
+                .app_name("wakemate") // Application name (shown on Linux).
                 .app_reverse_domain("com.example.wakemate") // Reverse domain name (used on Linux).
                 .create() // Creates the `KeepAwake` instance based on options.
                 .map_err(|e| e.to_string())?; // Convert any errors to `String` for Result handling.
